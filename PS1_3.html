@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset = "utf-8"> 
+    <title>Sorting Numbers</title>
+</head>
+<body>
+    <script>
+        let num1 = parseFloat(prompt("Enter the first number:"));
+        let num2 = parseFloat(prompt("Enter the second number:"));
+
+        let sortedNumbers = num1 < num2 ? num1 + " " + num2 : num2 + " " + num1;
+
+        document.body.innerHTML = "Numbers in order: " + sortedNumbers;
+    </script>
+</body>

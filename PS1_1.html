@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset = "utf-8"> 
+    <title>User Information</title>
+</head>
+<body>
+    <script>
+        let firstName = prompt("Enter your first name:");
+        let lastName = prompt("Enter your last name:");
+        
+        let fullName = firstName + " " + lastName;
+
+        alert("Your name is " + fullName);
+
+        let numOfChildren = parseInt(prompt("Enter the number of children you have:"));
+
+        let sentence;
+        if (numOfChildren === 0) {
+            sentence = "You have no children";
+        } else if (numOfChildren === 1) {
+            sentence = "You have 1 child";
+        } else {
+            sentence = "You have " + numOfChildren + " children";
+        }
+
+        document.body.innerHTML = sentence;
+    </script>
+</body>
