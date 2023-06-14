@@ -5,6 +5,19 @@
     <title>Counting Items</title>
 </head>
 <body>
+    <!--
+        Map Ref: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map
+        Split Ref: https://stackoverflow.com/questions/47253565/split-result-of-prompt-into-items-in-an-array
+    -->
+    <!--
+        count Items function:
+        1. Call "createArrayAndCount()" funciton:
+        a. array creation: prompt for list of numbers (as 1 num), 
+        b. split(" ") is array of substrings of prompt,
+        c. and then map(Number) to convert each elt. in array to int 
+        2. create "count()" f that takes 2 params: int array & value
+        a. return a count of nb of items in array less than value
+    -->
     <script>
         function count(array, value) {
             let count = 0;
@@ -17,10 +30,11 @@
         }
 
         function createArrayAndCount() {
-            let array = [3, 55, 30, 28, 9, 12];
-            let value = parseInt(prompt("Enter a value:"));
+            let array = prompt("Enter a list of numbers separated by spaces (e.g., 3 55 30 28 9 12):").split(" ").map(Number);
+            let value = parseInt(prompt("Enter a value:")); 
             let result = count(array, value);
-            document.body.innerHTML = "Count: " + result;
+
+            document.body.innerHTML = "Number of items in array less than " + value + " in array [" +array + "]: " + result;
         }
 
         createArrayAndCount();

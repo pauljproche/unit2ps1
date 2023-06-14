@@ -5,21 +5,29 @@
     <title>Odd Numbers and Sum</title>
 </head>
 <body>
+    <!--
+        Odd Nums and Sum:
+        1.get lower bound and upper bound nums (2 prompts and convert to int)
+        2.display oddnumbers in range (innerHTML as a string), display sum (of all
+        even and odd nums) in range
+        a. Iterate using one loop: i=startNum up until endNum
+        b. When not even, add to the sum and extend the oddNums string
+    -->
     <script>
         let startNum = parseInt(prompt("Enter the starting number:"));
         let endNum = parseInt(prompt("Enter the ending number:"));
 
-        let oddNumbers = "";
+        let oddNums = "";
         let sum = 0;
 
         for (let i = startNum; i <= endNum; i++) {
             if (i % 2 !== 0) {
-                oddNumbers += i + " ";
+                oddNums += i + " ";
                 sum += i;
             }
         }
 
-        document.body.innerHTML = "Odd numbers in the range: " + oddNumbers + "<br>";
+        document.body.innerHTML = "Odd numbers in the range: " + oddNums + "<br>";
         document.body.innerHTML += "Sum of the numbers in the range: " + sum;
     </script>
 </body>

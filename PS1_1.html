@@ -3,25 +3,35 @@
 <head>
     <meta charset = "utf-8"> 
     <title>User Information</title>
+    <!--User Info:
+    1. Prompt for firstName and lastName seperately (i.e., 2 prompts via prompt())
+    2. display response (firstName+lastName) as popup (i.e., alert())
+    3. Prompt for number of children (get as string to int (i.e.,convert with parseInt))
+    4. Display (on the page) the numOfChildren (with correct grammar using conditions)
+    a. "You have no children" if numChild == 0
+    b. "You have 1 child" if numChild == 1 
+    c. "You have x children" where x == numChild
+    5. Write to page! (i.e., innerHTML)
+    -->
 </head>
 <body>
     <script>
         let firstName = prompt("Enter your first name:");
         let lastName = prompt("Enter your last name:");
-        
+
         let fullName = firstName + " " + lastName;
 
         alert("Your name is " + fullName);
 
-        let numOfChildren = parseInt(prompt("Enter the number of children you have:"));
+        let numChild = parseInt(prompt("Enter the number of children you have:"));
 
         let sentence;
-        if (numOfChildren === 0) {
+        if (numChild === 0) {
             sentence = "You have no children";
-        } else if (numOfChildren === 1) {
+        } else if (numChild === 1) {
             sentence = "You have 1 child";
         } else {
-            sentence = "You have " + numOfChildren + " children";
+            sentence = "You have " + numChild + " children";
         }
 
         document.body.innerHTML = sentence;
